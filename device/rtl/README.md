@@ -2,7 +2,9 @@
 
 This directory contains the handwritten Verilog RTL modules used in the VolTune repository.
 
-These modules include common utility blocks, PMBus-related logic, measurement/test-support modules, and top-level RTL wrappers used by the FPGA designs.
+These modules include common utility blocks, PMBus-related logic, measurement/test-support modules, and top-level RTL wrappers used by the FPGA designs. 
+
+For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`../../docs/PMBUS.md`](../../docs/PMBUS.md).
 
 ## RTL files
 
