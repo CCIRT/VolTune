@@ -82,6 +82,12 @@ When the program is executed, two types of CSV files are output.
 - Result CSV: a file containing the time taken for each test to change and information about the settings. The output file name can be changed with the `-o` option.
 - Voltage Monitoring CSV: an information file of the voltage monitored by the FPGA. One CSV file is generated for each test. The output directory can be changed with the `-O` option.
 
+### Example output
+
+The following figure shows an example of the voltage-monitoring CSV output generated during a voltage-transition measurement.
+
+![](../../docs/design_docs/img/voltage_output_csv.png)
+
 ## Command line interface
 
 ```text
@@ -137,12 +143,6 @@ voltage-measure.exe -b <Bitstream Directory> -o result2.csv -O result2 -c 117.18
 
 To run one setting multiple times, use the `-r` option to specify the number of times to repeat the setting.
 
-### Example output
-
-The following figure shows an example of the voltage-monitoring CSV output generated during a voltage-transition measurement.
-
-![](../../docs/design_docs/img/voltage_output_csv.png)
-
 ### Helper script
 
 The following script automates the above steps:
@@ -156,16 +156,30 @@ It uses:
 
 Results are output to the `results` folder.
 
+## Validation note
+
+The settling-time values reported by this tool can be cross-checked against external oscilloscope measurements.
+
+In this repository, the primary automated measurement path uses PMBus-based voltage readback recorded by the FPGA and exported as CSV data. For validation, the same voltage transition can also be observed with an oscilloscope. The PMBus-based trace and the oscilloscope waveform reach the same target voltage and show the same overall transition trend. A timing offset can appear because the PMBus-based trace is derived from discrete sampled readback, while the oscilloscope provides higher-time-resolution analog sampling. For consistency across configurations, this repository uses the PMBus-based sampled readback for automated settling-time analysis.
+
+### PMBus-based voltage readback
+
+![](../../docs/design_docs/img/20230303_v_csv.png)
+
+### Oscilloscope waveform
+
+![](../../docs/design_docs/img/20230303_v_os.png)
+
 ## Source files
 
-- [args.hpp](./src/args.hpp): CLI Argument header
-- [config.hpp](./src/config.hpp): CSV like input file header
-- [regs.hpp](./src/regs.hpp): Register access utility header
-- [result.hpp](./src/result.hpp): Detect settling time function
-- [args.cpp](./src/args.cpp): implementation of `args.hpp`
-- [config.cpp](./src/config.cpp): implementation of `config.hpp`
-- [result.cpp](./src/result.cpp): implementation of `result.hpp`
-- [main.cpp](./src/main.cpp): main program
+- `args.hpp`: CLI argument header
+- `config.hpp`: CSV-like input file header
+- `result.hpp`: result data header
+- `regs.hpp`: register access utility header
+- `args.cpp`: implementation of `args.hpp`
+- `config.cpp`: implementation of `config.hpp`
+- `result.cpp`: implementation of `result.hpp`
+- `main.cpp`: main program
 
 ## Related files
 
