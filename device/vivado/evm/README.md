@@ -1,6 +1,7 @@
-# EVM
 
-This design is for experimental use to operate the [UCD9224EVM evaluation board](https://www.ti.com/tool/ja-jp/UCD9224EVM-464) from [Cora-Z7](https://digilent.com/reference/programmable-logic/cora-z7/start).
+# EVM Experimental Designs
+
+This directory contains Vivado designs for experimental use with the [UCD9224EVM evaluation board](https://www.ti.com/tool/ja-jp/UCD9224EVM-464) from [Cora-Z7](https://digilent.com/reference/programmable-logic/cora-z7/start).
 
 ⚠️ This design can **NOT** be written to KC705.
 
@@ -18,7 +19,7 @@ cd build-evm
 make impl_evm_voltage_test impl_evm_power_test
 ```
 
-### Bitstreams
+## Bitstreams
 
 - `<build-directory>/bitstream/evm_voltage_test/top.bit`
 - `<build-directory>/bitstream/evm_power_test/top.bit`
@@ -32,11 +33,11 @@ make open_evm_power_test
 
 ## Host sample program
 
-[`host/evm`](../../../host/evm) directory contains host sample program to operate this design.
+The [`host/evm`](../../../host/evm) directory contains host sample programs to operate this design.
 
 ## Sample Software PMBus
 
-Build:
+### Build
 
 ```sh
 make clear_evm_vitis evm_vitis
@@ -46,13 +47,13 @@ The cache will get in the way and prevent you from building, for example if you 
 
 Run `clear_evm_vitis` first before building to delete a Vitis project.
 
-Open Vivado:
+### Open Vivado
 
 ```sh
 make open_evm_vitis_design
 ```
 
-Open Vitis:
+### Open Vitis
 
 ```sh
 make open_evm_vitis
@@ -68,3 +69,13 @@ make open_evm_vitis
 - [vitis_design.xdc](vitis_design.xdc): XDC for vitis_design.tcl
 - [evm_coraz707s.xdc](./evm_coraz707s.xdc): XDC for design_1/2.tcl
 - [set_board_path.config.tcl](./set_board_path.config.tcl): TCL script to set board part.
+
+## Related files
+
+- [`../README.md`](../README.md), parent Vivado hierarchy
+- [`../../../host/evm/README.md`](../../../host/evm/README.md), host-side EVM utilities
+
+## Notes
+
+- These designs are experimental and separate from the main KC705-based VolTune evaluation flow.
+- The Software PMBus sample flow depends on Vitis project generation and may require clearing cached build state before rebuilding.
