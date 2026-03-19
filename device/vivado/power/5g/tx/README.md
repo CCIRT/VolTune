@@ -19,13 +19,4 @@ Please refer to [`../../10g/tx/README.md`](../../10g/tx/README.md) for the detai
 - [`../../../README.md`](../../../README.md), parent Vivado hierarchy
 - [`../../README.md`](../../README.md), parent power-oriented designs
 - [`../rx/README.md`](../rx/README.md), corresponding RX-side design
-- [`../loopback/README.md`](../loopback/README.md), corresponding loopback design# tx
-
-## What is this directory?
-
-This directory contains TX design with transceivers set to 5 Gbps.  
-This design is for testing that measuring Bit Error Rate, Latency and Power.
-
-## Details
-
-Please refer to [10g/tx/README.md](../../10g/tx/README.md).
+- [`../loopback/README.md`](../loopback/README.md), corresponding loopback design
