@@ -137,6 +137,12 @@ voltage-measure.exe -b <Bitstream Directory> -o result2.csv -O result2 -c 117.18
 
 To run one setting multiple times, use the `-r` option to specify the number of times to repeat the setting.
 
+### Example output
+
+The following figure shows an example of the voltage-monitoring CSV output generated during a voltage-transition measurement.
+
+![](../../docs/design_docs/img/voltage_output_csv.png)
+
 ### Helper script
 
 The following script automates the above steps:
