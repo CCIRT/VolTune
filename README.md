@@ -122,23 +122,11 @@ Main executables:
 
 ### A. Voltage transition measurement
 
-The voltage measurement flow programs a selected rail, records PMBus-based voltage samples, and exports settling-time related CSV outputs.
-
-Typical usage:
+Use the voltage measurement flow to program a selected rail, record PMBus-based voltage samples, and export settling-time-related CSV outputs.
 
 ```bash
 voltage-measure.exe <CONFIG_FILE> [OPTIONS]
 ```
-
-Typical options include:
-
-- `-b <dir>` bitstream directory
-- `-c <MHz>` external clock frequency
-- `-o <file>` summary result CSV
-- `-O <dir>` per-test voltage trace output directory
-- `-s <100k|400k|1m>` PMBus speed
-- `-sw` software control path only
-- `-hw` hardware control path only
 
 Representative input files and helper scripts:
 
@@ -146,28 +134,25 @@ Representative input files and helper scripts:
 - `experiments/sample_voltage_7p5.csv`
 - `experiments/msys_voltage_run.sh`
 
+For detailed usage and full option descriptions, see:
+
+- [`host/voltage/README.md`](host/voltage/README.md)
+- [`experiments/README.md`](experiments/README.md)
+
 ### B. BER / power / latency measurement
 
-The BER / power measurement flow sweeps operating points and records error rate, latency, and rail power statistics.
-
-Typical usage:
+Use the BER / power measurement flow to sweep operating points and record error rate, latency, and rail-power statistics.
 
 ```bash
 power-measure.exe <CONFIG_FILE> [OPTIONS]
 ```
 
-Typical options include:
-
-- `-b <dir>` bitstream directory
-- `-c <MHz>` external clock frequency
-- `-o <file>` result CSV
-- `-s <100k|400k|1m>` PMBus speed
-- `-r <N>` repeated runs
-- `-i` invert TX/RX device roles
-- `-sw` software control path only
-- `-hw` hardware control path only
-
 Representative input files and helper scripts are available under `experiments/`.
+
+For detailed usage and full option descriptions, see:
+
+- [`host/power/README.md`](host/power/README.md)
+- [`experiments/README.md`](experiments/README.md)
 
 ## Notes and limitations
 
