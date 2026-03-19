@@ -20,9 +20,9 @@ The host-side flow is intended to run on a Windows machine with MSYS2 and Xilinx
 
 ### Hardware
 
-- Xilinx Kintex-7 KC705 Evaluation Board
+- 2x [Xilinx Kintex-7 FPGA KC705 Evaluation Kit](https://www.xilinx.com/products/boards-and-kits/ek-k7-kc705-g.html)
 - TI UCD9248-based power control platform
-- Skyworks Si5391A-A EVB
+- 1x [Skyworks Si5391 clock generators](https://www.skyworksinc.com/-/media/Skyworks/SL/documents/public/data-sheets/si5391-datasheet.pdf)
 - Xilinx Platform Cable USB II
 
 ## Directory structure
