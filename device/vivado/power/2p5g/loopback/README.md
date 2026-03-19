@@ -16,7 +16,7 @@ Please refer to [`../../10g/loopback/README.md`](../../10g/loopback/README.md) f
 
 ## Related files
 
-- [`../README.md`](../README.md), parent 2.5 Gbps design overview
+- [`../../../README.md`](../../../README.md), parent Vivado hierarchy
 - [`../../README.md`](../../README.md), parent power-oriented designs
 - [`../tx/README.md`](../tx/README.md), corresponding TX-side design
 - [`../rx/README.md`](../rx/README.md), corresponding RX-side design

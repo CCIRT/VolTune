@@ -153,7 +153,7 @@ Typical error codes are listed below. If you encounter another value, please ref
 
 ## Related files
 
-- [`../README.md`](../README.md), parent 10 Gbps design overview
+- [`../../../README.md`](../../../README.md), parent Vivado hierarchy
 - [`../../README.md`](../../README.md), parent power-oriented designs
 - [`../tx/README.md`](../tx/README.md), corresponding TX-side design
 - [`../../test/README.md`](../../test/README.md), test-script details
