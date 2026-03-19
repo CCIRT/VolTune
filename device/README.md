@@ -4,6 +4,8 @@ This directory contains the FPGA-side sources for VolTune, including the hardwar
 
 The design targets PMBus-controlled FPGA platforms and, in the current repository, is instantiated on the Xilinx Kintex-7 KC705 platform with a TI UCD9248 programmable power controller.
 
+For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`../docs/PMBUS.md`](../docs/PMBUS.md).
+
 ## Directory structure
 
 ```text
