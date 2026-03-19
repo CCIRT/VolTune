@@ -134,12 +134,12 @@ voltage/
 
 ## Files
 
-- [design_1.tcl](./design_1.tcl), IP Integrator file
-- [design_1_with_transceiver.tcl](./design_1_with_transceiver.tcl), IP Integrator file with transceiver
-- [sw_pmbus/design_1.tcl](./sw_pmbus/design_1.tcl), SW-based PMBus IP Integrator file
-- [sw_pmbus/design_1_with_transceiver.tcl](./sw_pmbus/design_1_with_transceiver.tcl), SW-based PMBus IP Integrator file with transceiver
-- [CMakeLists.txt](./CMakeLists.txt), CMake file
-- [README.md](./README.md), this file
+- `design_1.tcl`, IP Integrator file
+- `design_1_with_transceiver.tcl`, IP Integrator file with transceiver
+- `sw_pmbus/design_1.tcl`, SW-based PMBus IP Integrator file
+- `sw_pmbus/design_1_with_transceiver.tcl`, SW-based PMBus IP Integrator file with transceiver
+- `CMakeLists.txt`, CMake file
+- `README.md`, this file
 
 ## Related files
 
