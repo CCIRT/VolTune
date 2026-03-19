@@ -210,5 +210,6 @@ Copyright (c) 2024-2026 National Institute of Advanced Industrial Science and Te
 All rights reserved.
 
 This software is released under the [MIT License](LICENSE).
+
 See also [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for files and materials that are excluded from the repository-wide MIT License.
 
