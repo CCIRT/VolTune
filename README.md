@@ -57,7 +57,7 @@ This path is more flexible and easier to extend, but it requires additional proc
 │   └── xsdb_wrapper/        # XSDB interaction layer
 ├── experiments/             # Sample configs and helper scripts
 └── docs/                    # Documentation assets and figures
-
+```
 
 ## Platform and tool requirements
 
