@@ -9,7 +9,7 @@ It is not used by the KC705-based VolTune evaluation flow.
 ## Related files
 
 - [`../../vivado/evm/README.md`](../../vivado/evm/README.md), corresponding EVM experimental designs
-- [`../README.md`](../README.md), parent device-side overview
+- [`../README.md`](../../README.md), parent device-side overview
 
 ## Notes
 
