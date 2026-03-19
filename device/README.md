@@ -1,43 +1,94 @@
-# device
+# Device-side Design
 
-This direcotry contains RTL, HLS, and vivado design projects.
+This directory contains the FPGA-side sources for VolTune, including the hardware control logic, software-assisted control components, Vivado design configurations, and supporting IP generation scripts.
 
-## Environment
+The design targets PMBus-controlled FPGA platforms and, in the current repository, is instantiated on the Xilinx Kintex-7 KC705 platform with a TI UCD9248 programmable power controller.
 
-- OS: Ubuntu 20.04
-- Tools:
-    - Xilinx Vivado/Vitis 2022.1
-    - CMake 3.XX.X
-    - GNU Make 4.2.1
-- Board: [Xilinx Kintex-7 FPGA KC705 Evaluation Kit](https://www.xilinx.com/products/boards-and-kits/ek-k7-kc705-g.html)
+## Directory structure
 
-## How to build
+```text
+device/
+├── hls/         # Vitis HLS modules used in the control and test infrastructure
+├── rtl/         # Handwritten RTL modules, including PMBus-related logic
+├── ip/          # IP generation scripts and wrapper files
+├── vitis_src/   # Software-side sources for the MicroBlaze-based control path
+├── vivado/      # Vivado project configurations and design variants
+└── constraint/  # XDC constraint files for supported design targets
+```
 
-Use [`../build_device.sh`](../build_device.sh) script.
+## Main components
 
-```sh
-cd <Repository top>
+### `hls/`
+
+This directory contains HLS-based modules used in the VolTune control and evaluation flow. These include controller-side modules, test managers, and utility blocks used by the FPGA designs.
+
+Representative modules include:
+
+- `power_manager/`, hardware control path support
+- `voltage_test_manager/`, runtime voltage control and measurement support
+- `ber_test_manager/`, BER and power experiment support
+- `test_app_base/`, common test application infrastructure
+
+### `rtl/`
+
+This directory contains handwritten Verilog modules used by the FPGA designs. It includes PMBus transaction logic, design wrappers, test support modules, and top-level RTL blocks for different runtime control configurations.
+
+Representative modules include:
+
+- PMBus interface modules
+- loopback, RX, and TX top-level variants
+- hardware wrappers for voltage-control experiments
+
+### `ip/`
+
+This directory contains IP generation scripts and wrapper files for transceiver-related designs and supporting infrastructure. These files are used by the Vivado build flow and should be treated as build-critical.
+
+### `vitis_src/`
+
+This directory contains software-side sources used by the MicroBlaze-based control path. It is used when the PowerManager is implemented as software running on an embedded processor rather than as dedicated FPGA logic.
+
+### `vivado/`
+
+This directory contains the main Vivado design hierarchy, including:
+
+- power-oriented designs
+- voltage-control designs
+- EVM-related designs
+- reference design examples
+
+This is the main entry point for design-specific FPGA build targets.
+
+### `constraint/`
+
+This directory contains XDC files for the supported design variants and operating modes.
+
+## Control-path view
+
+The FPGA-side implementation supports two control paths:
+
+- a **hardware control path**, where the PowerManager is implemented directly in FPGA logic
+- a **software control path**, where the PowerManager is implemented on **MicroBlaze**
+
+The hardware path is more lightweight and deterministic. The software path is more flexible and easier to extend.
+
+## Build
+
+From the repository root, FPGA designs can be built with:
+
+```bash
 ./build_device.sh all
 ```
 
-### Build vivado/design-example
+Generated outputs are placed under the repository build directory, including bitstreams for supported targets.
 
-[`vivado/design-example`](./vivado/design-example) directory contains design example which received from AIST and modified design.
+For design-specific details, see the README files under:
 
-Please refer to [`vivado/design-example/README.md`](./vivado/design-example/README.md) to build this.
+- `device/vivado/`
+- `device/vivado/power/`
+- `device/vivado/voltage/`
 
-## Directories
+## Notes
 
-```
-├── constraint : Constraint files
-├── hls        : Vitis HLS modules
-├── ip         : IPs
-├── rtl        : RTL files
-├── vitis_src  : Source files for Microblaze
-└── vivado     : FPGA designs
-```
-
-## Files
-
-- [CMakeLists.txt](./CMakeLists.txt): CMake root file for building FPGA design
-- [README.md](./README.md): This file
+- This directory contains build-critical sources. Do not rename IP identifiers, packaged-module names, or Vivado design references unless you have verified that the full build flow still works.
+- Some identifiers are intentionally preserved for compatibility with the existing Vivado, Vitis, and HLS build flow.
+- The transceiver-related designs in this repository are a representative case study used to validate the VolTune control architecture.
