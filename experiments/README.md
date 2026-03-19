@@ -25,9 +25,6 @@ experiments/
 
 The C/C++ code created for small experiment-related utilities is stored here.
 
-See also:
-
-- [`c/README.md`](c/README.md)
 
 ## CBPro files
 
