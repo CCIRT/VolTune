@@ -1,10 +1,22 @@
-# rx
+# RX Design, 5 Gbps
 
-## What is this directory?
+This directory contains the RX-side design with transceivers set to 5 Gbps.
 
-This directory contains RX design with transceivers set to 5 Gbps.  
-This design is for testing that measuring Bit Error Rate, Latency and Power.
+This design is used for BER, latency, and power measurement in the VolTune power-oriented transceiver case study.
+
+## Overview
+
+This is the RX-side design for the dual-board test flow at 5 Gbps.
 
 ## Details
 
-Please refer to [10g/rx/README.md](../../10g/rx/README.md).
+The structure and usage of this design follow the same pattern as the 10 Gbps RX design.
+
+Please refer to [`../../10g/rx/README.md`](../../10g/rx/README.md) for the detailed design description, test flow, register map, LED behavior, and typical error codes.
+
+## Related files
+
+- [`../README.md`](../README.md), parent 5 Gbps design overview
+- [`../../README.md`](../../README.md), parent power-oriented designs
+- [`../tx/README.md`](../tx/README.md), corresponding TX-side design
+- [`../loopback/README.md`](../loopback/README.md), corresponding loopback design
