@@ -15,14 +15,14 @@ Always restart the KC705 power before re-running the test.
 Execute the following command on MSYS2 (`C:\msys64\mingw64.exe`).
 
 ```bash
-cd <Reposigory top>
+cd <Repository top>
 ./msys_build.sh
 ```
 
 If you want to build them individually, execute the command as follows:
 
 ```bash
-cd <Reposigory top>
+cd <Repository top>
 mkdir build
 cd build
 cmake ../host
@@ -156,9 +156,9 @@ Results are output to the `results` folder.
 - [config.hpp](./src/config.hpp): CSV like input file header
 - [regs.hpp](./src/regs.hpp): Register access utility header
 - [result.hpp](./src/result.hpp): Detect settling time function
-- [args.cpp](./src/args.cpp): implements of args.hpp
-- [config.cpp](./src/config.cpp): implements of config.cpp
-- [result.cpp](./src/result.cpp): implements of result.hpp
+- [args.cpp](./src/args.cpp): implementation of `args.hpp`
+- [config.cpp](./src/config.cpp): implementation of `config.hpp`
+- [result.cpp](./src/result.cpp): implementation of `result.hpp`
 - [main.cpp](./src/main.cpp): main program
 
 ## Related files

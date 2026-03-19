@@ -68,7 +68,7 @@ make open_evm_vitis
 - [vitis_design.tcl](./vitis_design.tcl): Software PMBus sample design
 - [vitis_design.xdc](vitis_design.xdc): XDC for vitis_design.tcl
 - [evm_coraz707s.xdc](./evm_coraz707s.xdc): XDC for design_1/2.tcl
-- [set_board_path.config.tcl](./set_board_path.config.tcl): TCL script to set board part.
+- [set_board_path.config.tcl](./set_board_path.config.tcl): Tcl script to set board part.
 
 ## Related files
 

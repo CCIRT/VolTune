@@ -8,8 +8,8 @@ It contains the shared source files used by the Software PowerManager implementa
 
 - [pmbus.hpp](./pmbus.hpp): PMBus header file
 - [power_manager.hpp](./power_manager.hpp): Software PowerManager header file
-- [pmbus.cpp](./pmbus.cpp): Implements of pmbus.hpp
-- [power_manager.cpp](./power_manager.cpp): Implements of power_mamanger.hpp
+- [pmbus.cpp](./pmbus.cpp): implementation of `pmbus.hpp`
+- [power_manager.cpp](./power_manager.cpp): implementation of `power_manager.hpp`
 - [README.md](./README.md): This file
 
 ## Related files

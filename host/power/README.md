@@ -9,14 +9,14 @@ The program is intended to run from the MSYS2 environment and is used together w
 Execute the following command on MSYS2 (`C:\msys64\mingw64.exe`).
 
 ```bash
-cd <Reposigory top>
+cd <Repository top>
 ./msys_build.sh
 ```
 
 If you want to build them individually, execute the command as follows:
 
 ```bash
-cd <Reposigory top>
+cd <Repository top>
 mkdir build
 cd build
 cmake ../host
@@ -75,8 +75,8 @@ Each line describes the line number of the configuration file, the set voltage, 
 - [args.hpp](./src/args.hpp): CLI Argument header
 - [config.hpp](./src/config.hpp): CSV like input file header
 - [regs.hpp](./src/regs.hpp): Register access utility header
-- [args.cpp](./src/args.cpp): implements of args.hpp
-- [config.cpp](./src/config.cpp): implements of config.cpp
+- [args.cpp](./src/args.cpp): implementation of `args.hpp`
+- [config.cpp](./src/config.cpp): implementation of `config.hpp`
 - [main.cpp](./src/main.cpp): main program
 
 ## Related files
