@@ -1,6 +1,8 @@
-# vitis_src
+# Software PowerManager Sources
 
-This directory stores the common implementation code for Software PowerManager.
+This directory stores the common implementation code for the software control path in VolTune.
+
+It contains the shared source files used by the Software PowerManager implementation.
 
 ## Files
 
@@ -9,3 +11,15 @@ This directory stores the common implementation code for Software PowerManager.
 - [pmbus.cpp](./pmbus.cpp): Implements of pmbus.hpp
 - [power_manager.cpp](./power_manager.cpp): Implements of power_mamanger.hpp
 - [README.md](./README.md): This file
+
+## Related files
+
+- [`../README.md`](../README.md), parent device-side overview
+- [`../vivado/voltage/README.md`](../vivado/voltage/README.md), voltage-control designs
+- [`../vivado/power/README.md`](../vivado/power/README.md), power-oriented designs
+
+## Notes
+
+- These files are shared software-side sources for the MicroBlaze-based control path.
+- Do not rename these files unless the dependent Vitis and Vivado integration flow has been revalidated.
+
