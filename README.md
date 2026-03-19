@@ -19,6 +19,8 @@ In the current prototype:
   - a **software control path** implemented on **MicroBlaze**
 - The representative case study focuses on the **GTX transceiver supply rail (`MGTAVCC`)**
 
+For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`docs/PMBUS.md`](docs/PMBUS.md).
+
 ## Control paths
 
 ### Hardware control path
