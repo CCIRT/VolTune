@@ -85,8 +85,21 @@ Representative outputs include:
 - `build/bin/voltage-measure.exe`
 - `build/bin/power-measure.exe`
 
+## Board setup
+
+The host-side measurement flow assumes a Windows Host PC connected to two KC705 boards and a Skyworks Si5391A-A evaluation board.
+
+- The Host PC controls the KC705 boards through JTAG using `hw_server` and `xsdb`.
+- The clock board is configured using ClockBuilder Pro.
+- The clock board provides the external reference clocks for the transceiver experiments.
+- In the standard setup, use **125.000 MHz** for 2.5 Gbps, 5 Gbps, and 10 Gbps tests, and **117.188 MHz** for 7.5 Gbps tests.
+
+![Board connection overview](../docs/design_docs/img/board_connection.drawio.svg)
+
 ## Notes
 
 - This directory contains the host-side software only. FPGA-side designs are under the `device/` hierarchy.
 - The host-side flow depends on the corresponding FPGA bitstreams and board setup being prepared correctly.
 - Detailed run procedures and tool-specific options are described in the child README files under `power/` and `voltage/`.
+- The host-side flow assumes this board connection is prepared before running the measurement tools.
+- When using XSDB, connect no more than two KC705 boards to the same Host PC.
