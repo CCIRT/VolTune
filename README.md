@@ -4,7 +4,7 @@ VolTune is an FPGA-integrated runtime voltage control framework for PMBus-contro
 
 This repository accompanies the VolTune arXiv paper and contains the design artifacts used to build the controller, generate bitstreams, and run representative voltage, power, latency, and BER experiments.
 
-**Paper:** [arXiv link, to be added]
+**Paper:** [VolTune arXiv paper](docs/VolTune_arXiv_2026.pdf)  
 
 ## Overview
 
