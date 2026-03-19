@@ -4,6 +4,8 @@ This directory contains the Vivado designs used for runtime voltage control and 
 
 These designs are used to characterize the control path itself, including voltage update, voltage readback, and settling-time behavior. The hierarchy includes both a base voltage-measurement design and transceiver-integrated variants, and supports both hardware-based and software-based PMBus control paths.
 
+For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`../../../docs/PMBUS.md`](../../../docs/PMBUS.md).
+
 ## Scope
 
 The `voltage/` hierarchy contains designs for:
