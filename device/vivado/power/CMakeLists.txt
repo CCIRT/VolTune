@@ -1,0 +1,6 @@
+add_subdirectory(2p5g)
+add_subdirectory(5g)
+add_subdirectory(7p5g)
+add_subdirectory(10g)
+add_subdirectory(swpmbus)
+add_subdirectory(test)

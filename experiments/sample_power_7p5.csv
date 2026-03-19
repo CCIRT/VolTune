@@ -1,0 +1,12 @@
+# speed, Tx init voltage, Tx last voltage, Rx init voltage, Rx last voltage, step, parameter 0x1000, parameter 0x1010
+# 7.5g, 1 V, 0.9 V, 1V, 0.9V, 100, 2, 21474836520
+# 7.5g, 1 V, 0.9 V, 1V, 1V, 100, 2, 21474836520
+# 7.5g, 1 V, 1 V, 1V, 0.9V, 100, 2, 21474836520
+7.5g, 1 V, 0.9 V, 1V, 0.9V, 2, 2, 120000000
+7.5g, 1 V, 0.9 V, 1V, 1V, 2, 2, 120000000
+7.5g, 1 V, 1 V, 1V, 0.9V, 2, 2, 120000000
+
+
+# ** DON'T DELETE NEXT TEST **
+# ** Reset volate 1V **
+7.5g, 1 V, 1 V, 1 V, 1V, 1, 2, 120000000

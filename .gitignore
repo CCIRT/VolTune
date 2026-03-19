@@ -1,0 +1,8 @@
+build*/
+.vscode/
+*.log
+*.jou
+log/
+result/
+V/
+bitstream/

@@ -1,0 +1,133 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="858px" height="141px" viewBox="-0.5 -0.5 858 141" content="&lt;mxfile&gt;&lt;diagram id=&quot;aSQMj_zFltacayHFqXA2&quot; name=&quot;ページ1&quot;&gt;1Vlbj6IwFP41vAMFZR5Bndlks9nJaDLPXanaLFBT6m1+/RZoBfbgaHYpOvgg/Xr9zq3nBAtN0uMLx9vNDxaTxHLt+GihqeW6jucE8q9AThWCxk4FrDmN1aAamNMPokBboTsak7w1UDCWCLptg0uWZWQpWhjmnB3aw1Ysae+6xWsCgPkSJxB9p7HYVGjgjmv8G6Hrjd7ZGT1VPSnWgxWTfINjdmhAaGahCWdMVG/pcUKSQnhaLtW85wu954NxkolbJrjVhD1OdorbfBG+LdThxEkzhuuqrfaEC3JsQGqfF8JSIvhJDjnUIvIU7U1DOhrDSinr88z63PJFHb2bBgI0wun0bTaf90rk2D5wg1dgiJcHeL2bYOS4kJIpVflQVZPvgNSKJsmEJYyXTVQ9Fopywdlv0ugZlY/sWbFMNPDn8pF4H+IZDSceB5ryhKUpzmITindtyOxsDH1TcwNADXAisQy0qpmxTP5FG5HKFafOZ7rM2Y4v1RJ6VYH5moi2VIvlP5ULJwkWdN+O8/9FGkbYh7d3NGA46Ajd88XPVxPG7g9JC4Y5aOtZHBbJiGwtE5zndPkvar1q0g22fgdbjd1s+WqHV0blSVz79FfU0FMql1SjmhmInnjUV6eaeGmhyo/BQqUGzjRvU8oYKGVBUwIUI+1JCifCCV1nhXKkyInUR1SYGpVZYKg6UhrHxZyIk5x+4F/lfFu2t8Vhy+P7keVPi7V2guVVHusAt1aBrhkDNNS2Brv89ePkQO4O9I4ue0F9eMcTUMQ0XIQmnB513N3Gbjgtm68U7L1guKiIHCCf/ssNZc/jAWl13PHmy4/LPE1VIwje1WbLkTuoElZcD+/B5/LkDuKCac4Q1cplouZC+wgwBRR7KF6QSlGaxYsW8vDFC4IJ08N7A7pj8IAFrqlaZhTcj+WF5M2PxhYK7SLfNZnH3cH39RpfyQ28+xmIB7M8ZSCOLy0kMGQh/nXHN2chHRngo1vI6Hoi2ZOFyGb9RaOq2+vvQmj2Bw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="7" y="0" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="26.5" y="24.5">
+                START
+            </text>
+        </g>
+        <rect x="47" y="0" width="80" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="86.5" y="24.5">
+                ADDRESS
+            </text>
+        </g>
+        <rect x="127" y="0" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="146.5" y="24.5">
+                W
+            </text>
+        </g>
+        <rect x="167" y="0" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="186.5" y="24.5">
+                ACK
+            </text>
+        </g>
+        <rect x="207" y="0" width="120" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="266.5" y="24.5">
+                Command
+            </text>
+        </g>
+        <rect x="327" y="0" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="346.5" y="24.5">
+                ACK
+            </text>
+        </g>
+        <rect x="527" y="0" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="546.5" y="24.5">
+                STOP
+            </text>
+        </g>
+        <path d="M 7 120 L 800.63 120" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 805.88 120 L 798.88 123.5 L 800.63 120 L 798.88 116.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="807" y="110" width="50" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="#030303" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="831.5" y="129.5">
+                Time
+            </text>
+        </g>
+        <rect x="367" y="0" width="120" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="426.5" y="24.5">
+                DATA
+            </text>
+        </g>
+        <rect x="487" y="0" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="506.5" y="24.5">
+                ACK
+            </text>
+        </g>
+        <rect x="7" y="70" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="26.5" y="94.5">
+                START
+            </text>
+        </g>
+        <rect x="47" y="70" width="80" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="86.5" y="94.5">
+                ADDRESS
+            </text>
+        </g>
+        <rect x="127" y="70" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="146.5" y="94.5">
+                W
+            </text>
+        </g>
+        <rect x="167" y="70" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="186.5" y="94.5">
+                ACK
+            </text>
+        </g>
+        <rect x="207" y="70" width="120" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="266.5" y="94.5">
+                Command
+            </text>
+        </g>
+        <rect x="327" y="70" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="346.5" y="94.5">
+                ACK
+            </text>
+        </g>
+        <rect x="687" y="70" width="40" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="706.5" y="94.5">
+                STOP
+            </text>
+        </g>
+        <rect x="367" y="70" width="120" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="426.5" y="94.5">
+                DATA[7:0]
+            </text>
+        </g>
+        <rect x="487" y="70" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="506.5" y="94.5">
+                ACK
+            </text>
+        </g>
+        <rect x="527" y="70" width="120" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="586.5" y="94.5">
+                DATA[15:8]
+            </text>
+        </g>
+        <rect x="647" y="70" width="40" height="40" fill="#333333" stroke="#666666" pointer-events="all"/>
+        <g fill="#FFFFFF" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="666.5" y="94.5">
+                ACK
+            </text>
+        </g>
+    </g>
+</svg>

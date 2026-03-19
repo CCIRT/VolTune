@@ -1,0 +1,127 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="671px" height="431px" viewBox="-0.5 -0.5 671 431" content="&lt;mxfile&gt;&lt;diagram id=&quot;t5NJk6FyLdKes_B7K-Xz&quot; name=&quot;ページ1&quot;&gt;3VnbbqMwEP0apN2XCJtLwmMubbqXSJHS3XafIhfcxCrgyDi3fv3awQSISUq70JXyFGawjc/x8XjGMaxhtBsztFpOaIBDA5rBzrBGBoTABJ74kZ596vFMO3UsGAlUo9wxI68466m8axLgpNSQUxpysio7fRrH2OclH2KMbsvNnmlY/uoKLbDmmPko1L0PJODL1NuD3dx/h8limX0ZuApwhLLGCkmyRAHdFlzWjWENGaU8fYp2QxxK8jJe0n63Z94eJ8ZwzOt0yKa8QeFagVMT4/uw5CiOqT6zwYzjXcGlvjHGNMKc7UUT9dZWcLc5W27mWxaYsi3lRGqFFsehchDiQeE4g8n8FEzAVN9RIrZsDaPjVGCEvQYwWhrE7/f9Mew/fmsFqlWG6unL2a1azQaAAn0xfRpFKA40oDgQm1SZMY3FzwDvCH8UJlDPf8Sz2YGOMkcSn5kZ+8yIxRwfi0axm7Tzfgcr63iW6YSuma9mqVTCEVtg1cpJXXL+F1eD4RBxsikHoX8h19a4/S2iqAx+0LzHCTega0ALSGwTFAs/kzGMBmvBcf7qyybtNOeiyzxKG87Nr20o8agzpcSerkRQtencJqSob7q+/1JLhpmiQFlR3Q8rqigfu2n5qK5TSsRXj9Q7plWiHkgFFIdIVa56ndB6nEYtph2N6Bl95ltBgyGD+1F5U7o9SDIXZ+FlptPmRehk6cq+LK6iCGGFCEETp5t+YN/jnRgQmt/ihLN1JHAlBRp+DUcetHsVrA2p0BoNQ2m0T5JVl6UmtmpPI0mDeMy8JCUBSpY4UAYKySIWz74AL7ixBhI0EdlfX72ISBDIYQZijJUcLtotZKLbSXNL2OFb+oD2fWnJwQ+7uePKzX7IgSVt57f2O4LhSQbiObWO5SZU6OmhUKYe5k/C9S0n4PB38cpwQl7R06G/XJGVjCmH2ToDwxnJsdacJmldIGOqED59wUMaUpZH3WcShieuFkjv1suFmiAdgDOszzjDKLpu3m1Y5t3Ree+1xXuNIunTw4njZeEE2J2eJVePcnG+UzmkdzF5eAfpvfKZD109xAAX6rTDJmjXo/h0Mlgn161z5yTDtYBeV7otCT3T9SWhX6iyhCiLddbFIussU8Va6VOy3drk6NF3SNcHqVUVRWhHkrmfNmipGLJOjiJQkQB4LdXlFTcQ/z8mNp9igTczrMoctpHNqFfn8o7nuqOfXea7oryvqu4bodvV6L6djvuyTlqSVRvbt8YFYlsZTUWB9GPYNZ02YFbc/bYGSy9LJsRn9ClEr+3cBMA3bwLawpqNUcAqBDW5exU+P6TyYsoMaIRIfN0RIwvJxwxV30Wg6q+GD6yBMPN/ZtJrrfz/LevmLw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="30" y="0" width="640" height="430" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="90" y="34" width="550" height="280" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <rect x="120" y="90" width="70" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="154.5" y="114.5">
+                JTAG2AXI
+            </text>
+        </g>
+        <path d="M 410 95 L 487.63 92.69" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 492.88 92.53 L 485.99 96.24 L 487.63 92.69 L 485.78 89.24 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="11px">
+            <rect fill="rgb(255, 255, 255)" stroke="none" x="427" y="88" width="50" height="14" stroke-width="0"/>
+            <text x="451.48" y="97.75">
+                command
+            </text>
+        </g>
+        <rect x="260" y="80" width="150" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="334.5" y="100.5">
+                Voltage Test
+            </text>
+            <text x="334.5" y="114.5">
+                Manager module
+            </text>
+            <text x="334.5" y="128.5">
+                (voltage_test_manager_0)
+            </text>
+        </g>
+        <path d="M 493 126 L 416.37 125.08" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 411.12 125.01 L 418.16 121.6 L 416.37 125.08 L 418.08 128.6 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="11px">
+            <rect fill="rgb(255, 255, 255)" stroke="none" x="442" y="119" width="20" height="14" stroke-width="0"/>
+            <text x="450.5" y="129.49">
+                Ack
+            </text>
+        </g>
+        <rect x="494" y="60" width="120" height="130" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="553.5" y="115.5">
+                Software
+            </text>
+            <text x="553.5" y="129.5">
+                Power Manager
+            </text>
+            <text x="553.5" y="143.5">
+                module
+            </text>
+        </g>
+        <rect x="494" y="360" width="120" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="553.5" y="380.5">
+                Texas Instruments
+            </text>
+            <text x="553.5" y="394.5">
+                UCD9248
+            </text>
+            <text x="553.5" y="408.5">
+                Power Controller
+            </text>
+        </g>
+        <path d="M 212 104.75 L 238 104.75 L 238 95 L 260 110 L 238 125 L 238 115.25 L 212 115.25 L 212 125 L 190 110 L 212 95 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="190" y="70" width="70" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="224.5" y="89.5">
+                AXI Lite
+            </text>
+        </g>
+        <rect x="410" y="50" width="80" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="449.5" y="69.5">
+                AXI Stream
+            </text>
+        </g>
+        <path d="M 487.83 270.9 L 620.17 270.9 L 620.17 265 L 635 275 L 620.17 285 L 620.17 279.1 L 487.83 279.1 L 487.83 285 L 473 275 L 487.83 265 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" transform="rotate(90,554,275)" pointer-events="all"/>
+        <rect x="560" y="314" width="60" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="589.5" y="333.5">
+                PMBus
+            </text>
+        </g>
+        <path d="M 335 195 L 335 146.37" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 335 141.12 L 338.5 148.12 L 335 146.37 L 331.5 148.12 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="290" y="195" width="90" height="40" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="334.5" y="212.5">
+                Counter module
+            </text>
+            <text x="334.5" y="226.5">
+                (axis_counter_0)
+            </text>
+        </g>
+        <path d="M 22 104.75 L 98 104.75 L 98 95 L 120 110 L 98 125 L 98 115.25 L 22 115.25 L 22 125 L 0 110 L 22 95 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="30" y="80" width="50" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="54.5" y="99.5">
+                JTAG
+            </text>
+        </g>
+        <rect x="90" y="34" width="80" height="30" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="129.5" y="53.5">
+                FPGA Chip
+            </text>
+        </g>
+        <rect x="30" y="0" width="80" height="30" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="69.5" y="19.5">
+                KC705
+            </text>
+        </g>
+        <rect x="514" y="60" width="80" height="30" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="553.5" y="79.5">
+                Microblaze
+            </text>
+        </g>
+        <rect x="85" y="264" width="140" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="154.5" y="283.5">
+                100MHz clock domain
+            </text>
+        </g>
+    </g>
+</svg>

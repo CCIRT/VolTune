@@ -1,0 +1,274 @@
+#include "./args.hpp"
+#include <string_view>
+#include <iostream>
+#include <charconv>
+#include <parse_double.hpp>
+
+
+void Args::printHelp() const
+{
+  if (error)
+    std::cout << "ERROR! " << errorMessage.str() << std::endl;
+
+  std::cout << exec << " <CONFIG FILE> [Options]" << std::endl;
+  std::cout << std::endl
+    << "  Argument:" << std::endl
+    << "    CONFIG FILE: test configuration csv file." << std::endl
+    << std::endl
+    << "  Options:" << std::endl
+    << "    -h      : show this help." << std::endl
+    << "    -b DIR  : Bitstream directory path. The default path is `./bitstream`." << std::endl
+    << "    -c MHz  : External clock Frequency[MHz]. The default clock is 100." << std::endl
+    << "    -e NUM  : error margin of voltage to detect settling times. default is 0.04 (= 4%)" << std::endl
+    << "    -f MHz  : FPGA base clock MHz. default is 100 [MHz]." << std::endl
+    << "    -n SIZE : Number of monitored voltage values to be read from the device." << std::endl
+    << "            : The maximum value is 2048 and the default is 100. " << std::endl
+    << "            : The larger this value, the longer it takes to read the data via XSDB." << std::endl
+    << "            : Voltages are acquired at an interval of approximately once every 0.2[ms]." << std::endl
+    << "    -o FILE : Voltage csv file. The default file name is v_result.csv." << std::endl
+    << "    -O DIR  : Voltage csv directory. default is `output csv file`/../V" << std::endl
+    << "    -p PORT : hw_server port." << std::endl
+    << "    -r SIZE : Number of times the same test is run repeatedly." << std::endl
+    << "    -s SPEED: PMBus speed. SPEED=100k,400k,1m. The default value is 400k." << std::endl
+    << "    -u URL  : hw_server url." << std::endl
+    << "    -x PATH : xsdb path." << std::endl
+    << "    -y      : start test without warning message." << std::endl
+    << "    -w NUM  : the time from setting the initial voltage and setting the target voltage. default is 0.5[s]" << std::endl
+    << "    -sw     : Test software PowerManager only" << std::endl
+    << "    -hw     : Test hardware PowerManager only" << std::endl
+    << "       --log: show information level log." << std::endl
+    ;
+}
+
+Args::Args(int argc, const char** argv)
+  : exec(argv[0])
+{
+  bool setResultCSVFile = false;
+  bool setMonitoringDataDirectory = false;
+
+  bool arg2Fail = false;
+  for (int i = 1;i < argc; i++) {
+    const bool last = i + 1 == argc;
+    const std::string_view arg = argv[i];
+    const std::string_view arg2 = last ? "" : argv[i + 1];
+    const auto f = arg2.cbegin();
+    const auto e = arg2.cend();
+    double v;
+    int inc = 1;
+
+    if (arg == "-h" || arg == "--help") {
+      help = true;
+      inc = 0;
+    } else if (arg == "-y") {
+      noWarning = true;
+      inc = 0;
+    } else if (arg == "-sw") {
+      swOnly = true;
+      hwOnly = false;
+      inc = 0;
+    } else if (arg == "-hw") {
+      swOnly = false;
+      hwOnly = true;
+      inc = 0;
+    } else if (arg == "-e") {
+      if (!last) {
+        const auto ret = parse_double(arg2);
+        v = ret.value;
+        if (ret.end != e) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        } else {
+          errorMargin = v;
+        }
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-c") {
+      if (!last) {
+        const auto ret = parse_double(arg2);
+        if (!ret.ok) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        }
+        const auto posd = arg2.find('.');
+
+        if (posd != std::string_view::npos) {
+          externalClock = arg2;
+          externalClock.replace(posd, 1, "_");
+        } else {
+          std::stringstream ss;
+          ss << arg2;
+          ss << "_000";
+          externalClock = ss.str();
+        }
+        externalClockHz = uint32_t(ret.value * 1000 * 1000);
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-f") {
+      if (!last) {
+        const auto ret = parse_double(arg2);
+        v = ret.value;
+        if (!ret.ok) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        } else {
+          baseClockHz = v * 1000 * 1000;
+        }
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-w") {
+      if (!last) {
+        const auto ret = parse_double(arg2);
+        v = ret.value;
+        if (ret.end != e) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        } else if (v < 0) {
+          error = true;
+          errorMessage << argv[i - 1] << " >= 0: " << arg << std::endl;
+        }
+
+        testStartWatingTime = v;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-b") {
+      if (!last) {
+        bitstreamDirectory = arg2;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-o") {
+      if (!last) {
+        setResultCSVFile = true;
+        resultCSVFile = arg2;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-O") {
+      if (!last) {
+        setMonitoringDataDirectory = true;
+        monitoringDataDirectory = arg2;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-u") {
+      if (!last) {
+        url = arg2;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-p") {
+      if (!last) {
+        uint16_t pv;
+        const auto ret = std::from_chars(f, e, pv);
+        if (ret.ec != std::errc{}) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        }
+        port = pv;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-n") {
+      if (!last) {
+        int x;
+        const auto ret = std::from_chars(f, e, x);
+        if (ret.ec != std::errc{}) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        }
+        readDataSize = x;
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-s") {
+      if (!last) {
+        if (arg2 == "100k" || arg2 == "100K") {
+          pmbusSpeed = 0;
+        } else if (arg2 == "400k" || arg2 == "400K") {
+          pmbusSpeed = 1;
+        } else if (arg2 == "1m" || arg2 == "1M") {
+          pmbusSpeed = 2;
+        } else {
+          error = true;
+          errorMessage << "Unknown PMBus speed: " << arg2 << std::endl;
+        }
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-x") {
+      if (!last) {
+        xsdb = argv[i+1];
+      } else {
+        arg2Fail = true;
+      }
+    } else if (arg == "-r") {
+      if (!last) {
+        int x;
+        const auto ret = std::from_chars(f, e, x);
+        if (ret.ec != std::errc{}) {
+          error = true;
+          errorMessage << "parse error: " << arg << " " << arg2 << std::endl;
+        }
+        if (x < 1) {
+          error = true;
+          errorMessage << "-r >= 1: " << arg << " " << arg2 << std::endl;
+        }
+        repeat = x;
+      } else {
+        arg2Fail = true;
+      }
+    }  else if (arg == "--log") {
+      showLog = true;
+      inc = 0;
+    } else if (arg[0] == '-') {
+      error = true;
+      errorMessage << "Unknown option: " << arg << std::endl;
+      inc = 0;
+    } else {
+      configFile = arg;
+      inc = 0;
+    }
+    i += inc;
+  } // end for
+
+  // check missing value
+  if (arg2Fail) {
+    error = true;
+    errorMessage << "Invalid option: " << argv[argc - 1] << " nead value." << std::endl;
+  }
+
+  if (configFile == "") {
+    error = true;
+    errorMessage << "Specify the configuration file." << std::endl;
+  } else if (!std::filesystem::exists(configFile)) {
+    error = true;
+    errorMessage << "Config file not found: " << configFile << std::endl;
+  }
+
+  // monitoringDataDirectory = resultCSVFile/../V
+  if (setResultCSVFile && !setMonitoringDataDirectory)
+    monitoringDataDirectory = resultCSVFile.parent_path() / "V";
+
+  // check bitstream directory exists
+  if (!std::filesystem::exists(bitstreamDirectory)) {
+    error = true;
+    errorMessage << "Bitstream directory `" << bitstreamDirectory << "` is not exists. " << std::endl
+      << "  * This path can be changed by the option '-b <DIR>'." << std::endl;
+  }
+}
+
+void Args::makeDirectories() const
+{
+  using namespace std::filesystem;
+  const auto p = resultCSVFile.parent_path();
+
+  if (!p.empty() && !is_directory(p))
+    create_directories(p);
+
+  if (!monitoringDataDirectory.empty() && !is_directory(monitoringDataDirectory))
+    create_directories(monitoringDataDirectory);
+}

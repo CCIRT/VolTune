@@ -1,0 +1,23 @@
+# lane, speed, mode, init voltage, target voltage, mode, init voltage, target voltage
+# 7.5G
+mgtavcc, 7.5g, Tx, 1.0, 0.9, Rx, 1.0, 0.9
+mgtavcc, 7.5g, Tx, 1.0, 0.8, Rx, 1.0, 0.8
+mgtavcc, 7.5g, Tx, 1.0, 0.7, Rx, 1.0, 0.7
+mgtavcc, 7.5g, Tx, 1.0, 0.6, Rx, 1.0, 0.6
+mgtavcc, 7.5g, Tx, 1.0, 0.5, Rx, 1.0, 0.5
+mgtavcc, 7.5g, Tx, 0.9, 1.0, Rx, 0.9, 1.0
+mgtavcc, 7.5g, Tx, 0.8, 1.0, Rx, 0.8, 1.0
+mgtavcc, 7.5g, Tx, 0.7, 1.0, Rx, 0.7, 1.0
+mgtavcc, 7.5g, Tx, 0.6, 1.0, Rx, 0.6, 1.0
+mgtavcc, 7.5g, Tx, 0.5, 1.0, Rx, 0.5, 1.0
+
+mgtavcc, 7.5g, Rx, 1.0, 0.9, Tx, 1.0, 0.9
+mgtavcc, 7.5g, Rx, 1.0, 0.8, Tx, 1.0, 0.8
+mgtavcc, 7.5g, Rx, 1.0, 0.7, Tx, 1.0, 0.7
+mgtavcc, 7.5g, Rx, 1.0, 0.6, Tx, 1.0, 0.6
+mgtavcc, 7.5g, Rx, 1.0, 0.5, Tx, 1.0, 0.5
+mgtavcc, 7.5g, Rx, 0.9, 1.0, Tx, 0.9, 1.0
+mgtavcc, 7.5g, Rx, 0.8, 1.0, Tx, 0.8, 1.0
+mgtavcc, 7.5g, Rx, 0.7, 1.0, Tx, 0.7, 1.0
+mgtavcc, 7.5g, Rx, 0.6, 1.0, Tx, 0.6, 1.0
+mgtavcc, 7.5g, Rx, 0.5, 1.0, Tx, 0.5, 1.0
