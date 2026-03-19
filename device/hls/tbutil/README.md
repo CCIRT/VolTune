@@ -1,8 +1,10 @@
-# Test Bench Utility
+# HLS Test Bench Utility
 
-This directory provide a GoogleTest-like testing library for HLS.
+This directory provides a GoogleTest-like testing library for HLS.
 
-## sample code
+It is used to simplify unit-style testing of HLS modules and helper wrappers in the VolTune repository.
+
+## Sample code
 
 ```cpp
 #include <tbutil>
@@ -60,6 +62,13 @@ TEST_F(MyTest, test2) {
 
 
 }
-
-
 ```
+
+## Related files
+
+- [`../../README.md`](../../README.md), parent device-side overview
+
+## Notes
+
+- This utility is intended for HLS test bench development.
+- The wrapper function is defined in global scope to avoid the cosim issue noted in the sample.
