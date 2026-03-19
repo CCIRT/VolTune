@@ -110,7 +110,6 @@ do
       shift 2
       ;;
 
-    # Hidden option. (for Fixstars)
     -e | --evm)
       evmmode="-DEVM=ON"
       build="build-evm"
