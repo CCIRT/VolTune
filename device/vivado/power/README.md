@@ -4,6 +4,8 @@ This directory contains the Vivado designs and projects used for BER and latency
 
 It is the main design hierarchy for the representative transceiver case study and includes design variants for multiple line rates, single-board loopback tests, dual-board TX/RX tests, and both hardware-based and software-based PMBus control paths.
 
+For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`../../../docs/PMBUS.md`](../../../docs/PMBUS.md).
+
 ## Scope
 
 The `power/` hierarchy contains designs for:
