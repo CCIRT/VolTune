@@ -15,15 +15,11 @@ The `voltage/` hierarchy contains designs for:
   - hardware-based PMBus control
   - software-based PMBus control, under [`sw_pmbus/`](sw_pmbus/)
 
-## Control-path views
 
-### Voltage measurement design
+## Voltage measurement design
 
 ![](../../../docs/design_docs/img/voltage_test_manager.png)
 
-### Transceiver-integrated voltage-control design
-
-![](../../../docs/design_docs/img/vm_tr_block.drawio.svg)
 
 ## How to build
 
