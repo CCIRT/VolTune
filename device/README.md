@@ -18,18 +18,18 @@ device/
 
 ## Main components
 
-### `hls/`
+### [`hls/`](hls/)
 
 This directory contains HLS-based modules used in the VolTune control and evaluation flow. These include controller-side modules, test managers, and utility blocks used by the FPGA designs.
 
 Representative modules include:
 
-- `power_manager/`, hardware control path support
-- `voltage_test_manager/`, runtime voltage control and measurement support
-- `ber_test_manager/`, BER and power experiment support
-- `test_app_base/`, common test application infrastructure
+- [`power_manager/`](hls/power_manager/), hardware control path support
+- [`voltage_test_manager/`](hls/voltage_test_manager/), runtime voltage control and measurement support
+- [`ber_test_manager/`](hls/ber_test_manager/), BER and power experiment support
+- [`test_app_base/`](hls/test_app_base/), common test application infrastructure
 
-### `rtl/`
+### [`rtl/`](rtl/)
 
 This directory contains handwritten Verilog modules used by the FPGA designs. It includes PMBus transaction logic, design wrappers, test support modules, and top-level RTL blocks for different runtime control configurations.
 
@@ -39,15 +39,15 @@ Representative modules include:
 - loopback, RX, and TX top-level variants
 - hardware wrappers for voltage-control experiments
 
-### `ip/`
+### [`ip/`](ip/)
 
 This directory contains IP generation scripts and wrapper files for transceiver-related designs and supporting infrastructure. These files are used by the Vivado build flow and should be treated as build-critical.
 
-### `vitis_src/`
+### [`vitis_src/`](vitis_src/)
 
 This directory contains software-side sources used by the MicroBlaze-based control path. It is used when the PowerManager is implemented as software running on an embedded processor rather than as dedicated FPGA logic.
 
-### `vivado/`
+### [`vivado/`](vivado/)
 
 This directory contains the main Vivado design hierarchy, including:
 
@@ -58,7 +58,7 @@ This directory contains the main Vivado design hierarchy, including:
 
 This is the main entry point for design-specific FPGA build targets.
 
-### `constraint/`
+### [`constraint/`](constraint/)
 
 This directory contains XDC files for the supported design variants and operating modes.
 
@@ -83,9 +83,9 @@ Generated outputs are placed under the repository build directory, including bit
 
 For design-specific details, see the README files under:
 
-- `device/vivado/`
-- `device/vivado/power/`
-- `device/vivado/voltage/`
+- [`device/vivado/`](vivado/)
+- [`device/vivado/power/`](vivado/power/)
+- [`device/vivado/voltage/`](vivado/voltage/)
 
 ## Notes
 
