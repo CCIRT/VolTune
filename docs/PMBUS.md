@@ -18,6 +18,16 @@ SMBus uses I²C as the communication standard, and an ALERT line is added to not
 
 PMBus defines bus speeds of 100 kHz and 400 kHz. Some devices support up to 1 MHz. Refer to the datasheet of each device for supported transfer speeds.
 
+## PMBus clock settings in this repository
+
+At the PMBus protocol level, the original design notes describe **100 kHz** and **400 kHz** as standard PMBus bus speeds, and note that some devices support **up to 1 MHz**. The PMBus module in this repository also exposes three clock-select settings:
+
+- `0`: 100 kHz
+- `1`: 400 kHz
+- `2`: 1 MHz
+
+However, the current VolTune controller characterization and evaluation focus on **100 kHz** and **400 kHz** PMBus operation. These are the PMBus clock settings used in the current paper-level evaluation of control latency and measurement granularity.
+
 ### PMBus lines
 
 ![](design_docs/img/pmbus_dev.drawio.svg)
