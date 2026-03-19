@@ -72,12 +72,12 @@ Each line describes the line number of the configuration file, the set voltage, 
 
 ## Source files
 
-- `args.hpp`: CLI argument header
-- `config.hpp`: CSV-like input file header
-- `regs.hpp`: Register access utility header
-- `args.cpp`: implementation of `args.hpp`
-- `config.cpp`: implementation of `config.hpp`
-- `main.cpp`: main program
+- [args.hpp](./src/args.hpp): CLI Argument header
+- [config.hpp](./src/config.hpp): CSV like input file header
+- [regs.hpp](./src/regs.hpp): Register access utility header
+- [args.cpp](./src/args.cpp): implements of args.hpp
+- [config.cpp](./src/config.cpp): implements of config.cpp
+- [main.cpp](./src/main.cpp): main program
 
 ## Related files
 
