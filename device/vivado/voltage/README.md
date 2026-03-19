@@ -29,18 +29,18 @@ The `voltage/` hierarchy contains designs for:
 
 The voltage-control designs follow a host-driven measurement sequence through JTAG register access.
 
-1. The host writes the test registers and starts the measurement flow.
-2. The TestManager clears status and programs the PMBus-related threshold settings required for safe voltage control:
-   - under-voltage limits
+1. The host writes the control registers and starts the measurement flow.
+2. The TestManager clears status and configures the PMBus-related threshold values needed for safe voltage control:
+   - under-voltage warning and fault limits
    - power-good on threshold
    - power-good off threshold
 3. The initial voltage is written through `VOUT_COMMAND`.
-4. After a short wait, the design reads and stores the first monitored voltage value through `READ_VOUT`.
+4. After a short wait, the design issues a voltage read and stores the first monitored voltage value.
 5. The target voltage is written through `VOUT_COMMAND`.
-6. The design repeatedly reads `READ_VOUT` and stores sampled voltage values until the monitoring buffer is full.
-7. The host polls for completion and then reads back the voltage buffer for settling-time analysis.
+6. The design repeatedly reads back the output voltage and stores sampled values until the monitoring buffer is full.
+7. The host polls for completion and then reads back the stored voltage buffer for settling-time analysis.
 
-The same overall measurement flow is used for both the hardware control path and the software control path. The host-side voltage measurement tool then uses the recorded voltage samples and timing information to analyze transition behavior.
+As shown in the sequence diagram, the PMBus transactions include threshold programming, initial-voltage setup, target-voltage update, and repeated `READ_VOUT` sampling. The same overall measurement flow is used for both the hardware control path and the software control path. The host-side voltage measurement tool then uses the recorded voltage samples and timing information to analyze transition behavior.
 
 ## How to build
 
@@ -151,12 +151,12 @@ voltage/
 
 ## Files
 
-- `design_1.tcl`, IP Integrator file
-- `design_1_with_transceiver.tcl`, IP Integrator file with transceiver
-- `sw_pmbus/design_1.tcl`, SW-based PMBus IP Integrator file
-- `sw_pmbus/design_1_with_transceiver.tcl`, SW-based PMBus IP Integrator file with transceiver
-- `CMakeLists.txt`, CMake file
-- `README.md`, this file
+- [`design_1.tcl`](./design_1.tcl), IP Integrator file
+- [`design_1_with_transceiver.tcl`](./design_1_with_transceiver.tcl), IP Integrator file with transceiver
+- [`sw_pmbus/design_1.tcl`](./sw_pmbus/design_1.tcl), SW-based PMBus IP Integrator file
+- [`sw_pmbus/design_1_with_transceiver.tcl`](./sw_pmbus/design_1_with_transceiver.tcl), SW-based PMBus IP Integrator file with transceiver
+- [`CMakeLists.txt`](./CMakeLists.txt), CMake file
+- [`README.md`](./README.md), this file
 
 ## Related files
 
