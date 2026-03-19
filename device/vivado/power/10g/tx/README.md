@@ -1,13 +1,14 @@
-# tx
+# TX Design, 10 Gbps
 
-## What is this directory?
+This directory contains the TX-side design with transceivers set to 10 Gbps.
 
-This directory contains TX design with transceivers set to 10 Gbps.  
-This design is for testing that measuring Bit Error Rate, Latency and Power.
+This design is used for BER, latency, and power measurement in the VolTune power-oriented transceiver case study.
+
+## Overview
+
+This is the TX-side design for the dual-board test flow.
 
 ## Block diagram
-
-This is TX side design.
 
 ![](../../../../../docs/design_docs/img/connected_block.drawio.svg)
 
@@ -53,7 +54,7 @@ ResetToDefaultVoltage2
 
 ## Typical error codes
 
-Show typical error codes. If you encounter another value, please refer to error code in [test_app_base.cpp](../../../../hls/test_app_base/src/test_app_base.cpp).
+Typical error codes are listed below. If you encounter another value, please refer to the error code definitions in [test_app_base.cpp](../../../../hls/test_app_base/src/test_app_base.cpp).
 
 ### result = 0x0: SUCCESS
 
@@ -88,7 +89,7 @@ Show typical error codes. If you encounter another value, please refer to error 
 | 0x0000_0020 | [63:0] | R/W  | test_voltage   | Test voltage of MGTAVCC. |
 | 0x0000_1000 | [63:0] | R/W  | test_pattern   | Test pattern. "0: All Zero", "1: All Hi" or "2: Count Up". |
 | 0x0000_1010 | [63:0] | R/W  | test_size      | Test size. This value is aligned to 8 Byte. |
-| 0x0000_2000 | [63:0] | R    | result         | Result value of test. Please refer to "Typical error codes" section. |
+| 0x0000_2000 | [63:0] | R    | result         | Result value of test. Please refer to the **Typical error codes** section. |
 | 0x0000_2010 | [63:0] | R    | error_bit_cnt  | This value is set to zero. |
 | 0x0000_2020 | [63:0] | R    | latency        | This value is set to zero. |
 | 0x0000_2030 | [63:0] | R    | min_power      | Minimum power value while testing. |
@@ -105,19 +106,26 @@ Show typical error codes. If you encounter another value, please refer to error 
 | 0x0003_0000 | [0]    | R/W  | cancel_test    | Cancel test application when this value is 1. |
 | 0x0003_0008 | [0]    | R/W  | cancel_pmbus   | Cancel PMBus access when this value is 1. |
 
-# LED
+## LED
 
-- \[1:0\]: TX, RX or Loopback
-  - 2'b00: Reserved
-  - 2'b01: TX
-  - 2'b10: RX
-  - 2'b11: Loopback
-- \[3:2\]: Speed
-  - 2'b00:  2.5 Gbps
-  - 2'b01:  5.0 Gbps
-  - 2'b10:  7.5 Gbps
-  - 2'b11: 10.0 Gbps
-- \[4\]: Blinking according to internal clock
-- \[5\]: Blinking according to external clock
-- \[6\]: Lighting during testing
-- \[7\]: Lighting when test result is not OK
+- `[1:0]`: TX, RX or Loopback
+  - `2'b00`: Reserved
+  - `2'b01`: TX
+  - `2'b10`: RX
+  - `2'b11`: Loopback
+- `[3:2]`: Speed
+  - `2'b00`: 2.5 Gbps
+  - `2'b01`: 5.0 Gbps
+  - `2'b10`: 7.5 Gbps
+  - `2'b11`: 10.0 Gbps
+- `[4]`: Blinking according to internal clock
+- `[5]`: Blinking according to external clock
+- `[6]`: Lighting during testing
+- `[7]`: Lighting when test result is not OK
+
+## Related files
+
+- [`../README.md`](../README.md), parent 10 Gbps design overview
+- [`../../README.md`](../../README.md), parent power-oriented designs
+- [`../rx/README.md`](../rx/README.md), corresponding RX-side design
+- [`../../test/README.md`](../../test/README.md), test-script details
