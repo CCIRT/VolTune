@@ -1,23 +1,28 @@
-# host/evm
+# EVM Host Utilities
 
-This directory contains sample programs to manipulate [experimental designs](../../device/vivado/evm) for [UCD9224EVM evaluation board](https://www.ti.com/tool/ja-jp/UCD9224EVM-464) from the host.
+This directory contains sample host-side programs used to manipulate the [experimental designs](../../device/vivado/evm) for the [UCD9224EVM evaluation board](https://www.ti.com/tool/ja-jp/UCD9224EVM-464).
 
 ## Design
 
 - [experimental designs](../../device/vivado/evm)
 
-## targets
+## Targets
 
-- evm_voltage
-- evm_power
+- `evm_voltage`
+- `evm_power`
 
-## binary
+## Generated binaries
 
 - `build/bin/evm_voltage`
 - `build/bin/evm_power`
 
-## Specifying a Bitstream
+## Specifying a bitstream
 
-There is no mechanism implemented to give the path of the bitstream from the command line.
+There is no mechanism implemented to specify the bitstream path from the command line.
 
-You must edit the C++ file directly to change the bitstream.
+To change the bitstream, you must edit the corresponding C++ source file directly.
+
+## Related files
+
+- [`../README.md`](../README.md), parent host-side overview
+- [`../../device/vivado/evm/README.md`](../../device/vivado/evm/README.md), corresponding FPGA-side EVM designs
