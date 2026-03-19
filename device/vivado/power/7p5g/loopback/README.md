@@ -1,10 +1,22 @@
-# loopback
+# Loopback Design, 7.5 Gbps
 
-## What is this directory?
+This directory contains the loopback design with transceivers set to 7.5 Gbps.
 
-This directory contains loopback design with transceivers set to 7.5 Gbps.  
-This design is for testing that measuring Bit Error Rate, Latency and Power.
+This design is used for BER, latency, and power measurement in the VolTune power-oriented transceiver case study.
+
+## Overview
+
+This is the single-board loopback design for the test flow at 7.5 Gbps.
 
 ## Details
 
-Please refer to [10g/loopback/README.md](../../10g/loopback/README.md).
+The structure and usage of this design follow the same pattern as the 10 Gbps loopback design.
+
+Please refer to [`../../10g/loopback/README.md`](../../10g/loopback/README.md) for the detailed design description, test flow, register map, LED behavior, and typical error codes.
+
+## Related files
+
+- [`../README.md`](../README.md), parent 7.5 Gbps design overview
+- [`../../README.md`](../../README.md), parent power-oriented designs
+- [`../tx/README.md`](../tx/README.md), corresponding TX-side design
+- [`../rx/README.md`](../rx/README.md), corresponding RX-side design
