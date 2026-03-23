@@ -1,6 +1,6 @@
 # PMBus Notes for VolTune
 
-This document provides a brief PMBus overview for the VolTune repository.
+This document provides a brief PMBus overview for the VolTune repository. It reflects the KC705 + UCD9248 prototype used in this repository. Porting to another PMBus-controlled platform may require adapting rail mapping, command sequencing, and voltage encoding or decoding behavior, including regulator-specific handling such as `VOUT_MODE`.
 
 It is derived from the original PMBus design notes included in the source repository and focuses only on the parts of PMBus that are actually relevant to VolTune, voltage control, voltage readback, and power/current monitoring.
 
@@ -226,6 +226,8 @@ The OV thresholds should not be changed.
 | VOUT_UV_FAULT_LIMIT | `0x44` | Write Word | LINEAR16 [V] |
 | POWER_GOOD_ON | `0x5E` | Write Word | LINEAR16 [V] |
 | POWER_GOOD_OFF | `0x5F` | Write Word | LINEAR16 [V] |
+
+The threshold-update sequence described here reflects the prototype KC705 workflow. It should not be interpreted as a universal PMBus bring-up sequence for all regulators.
 
 ## Readback commands
 

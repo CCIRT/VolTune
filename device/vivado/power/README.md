@@ -1,6 +1,6 @@
 # Power-oriented Designs
 
-This directory contains the Vivado designs and projects used for BER and latency measurement in the VolTune repository.
+This directory contains the Vivado designs and projects used for BER and latency measurement in the VolTune repository. Quantitative operating boundaries are specific to this board, regulator configuration, and workload, and should not be generalized without separate characterization.
 
 It is the main design hierarchy for the representative transceiver case study and includes design variants for multiple line rates, single-board loopback tests, dual-board TX/RX tests, and both hardware-based and software-based PMBus control paths.
 
@@ -378,6 +378,7 @@ power/
 
 ## Notes
 
+-The architecture is portable, but practical reuse still requires board-specific rail maps, safe bounds, and measurement validation.
 - This hierarchy is the main design family for reproducing the VolTune transceiver case study.
 - The [`swpmbus/`](swpmbus/) subtree corresponds to the software control path.
 - These designs are build-critical. Do not rename packaged IP identifiers, Tcl targets, or integrated design references unless the full build flow has been revalidated.

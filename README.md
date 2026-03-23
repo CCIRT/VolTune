@@ -10,6 +10,7 @@ This repository accompanies the VolTune arXiv paper and contains the design arti
 
 VolTune exposes board-level voltage control as a runtime architectural mechanism inside the FPGA platform. Rather than relying on manual board-level intervention or ad hoc external control, VolTune integrates the voltage-control path into the FPGA system through a command-driven interface that can be invoked at runtime. The design is intended as a reusable control mechanism, not as a fixed optimization policy.
 
+This repository is the implementation used for the validated KC705 + TI UCD9248 setup. The architecture is portable, but reuse on another PMBus-controlled board still requires board-specific rail mapping, safe bounds, and validation. 
 In the current prototype:
 
 - The target platform is the **Xilinx Kintex-7 KC705**
@@ -159,11 +160,13 @@ For detailed usage and full option descriptions, see:
 ## Notes and limitations
 
 - This repository is a research artifact, not a productized software package.
+- VolTune performs runtime voltage adjustment after normal board bring-up. It is not a generic PMBus initialization or full power-state-management framework, and safe-voltage policy remains platform-specific.
 - The public release preserves build-critical identifiers where changing them could break Vivado, Vitis, HLS, or IP integration.
 - The current implementation and evaluation flow are centered on the **KC705 + UCD9248** platform.
 - The transceiver case study is a representative demonstration, not a claim of universal behavior across all rails or all FPGA platforms.
 - Clock-board setup is not automated by the host tools and must be prepared separately.
 - If a PMBus-related test fails unexpectedly, power-cycle the KC705 before retrying.
+
 
 ## Citation
 

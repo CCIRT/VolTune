@@ -10,6 +10,8 @@ If an error occurs unexpectedly while running the test program, there is most li
 
 Always restart the KC705 power before re-running the test.
 
+This tool assumes the board has already completed normal bring-up and that the target rail is already enabled. It performs runtime voltage adjustment and sampled readback for the current prototype flow, not generic regulator initialization.
+
 ## How to build
 
 Execute the following command on MSYS2 (`C:\msys64\mingw64.exe`).
@@ -188,7 +190,7 @@ In this repository, the primary automated measurement path uses PMBus-based volt
 - [`../../device/vivado/voltage/README.md`](../../device/vivado/voltage/README.md), corresponding FPGA-side voltage-control designs
 
 ## Notes
-
+- Board-specific safe-voltage limits are not enforced generically by this tool and must be defined externally.
 - This tool is intended for controller characterization and voltage-transition measurement rather than BER and power case-study evaluation.
 - The host-side flow depends on the corresponding FPGA bitstreams and board setup being prepared correctly.
 - Clock-board setup is not automated by this tool and must be prepared separately.

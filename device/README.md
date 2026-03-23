@@ -2,7 +2,7 @@
 
 This directory contains the FPGA-side sources for VolTune, including the hardware control logic, software-assisted control components, Vivado design configurations, and supporting IP generation scripts.
 
-The design targets PMBus-controlled FPGA platforms and, in the current repository, is instantiated on the Xilinx Kintex-7 KC705 platform with a TI UCD9248 programmable power controller.
+The design targets PMBus-controlled FPGA platforms and, in the current repository, is instantiated on the Xilinx Kintex-7 KC705 platform with a TI UCD9248 programmable power controller. The architectural structure is portable, but reuse on another platform requires board-specific adaptation of rail mapping, voltage handling, and operating limits.
 
 For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`../docs/PMBUS.md`](../docs/PMBUS.md).
 
@@ -91,6 +91,7 @@ For design-specific details, see the README files under:
 
 ## Notes
 
+- VolTune should be interpreted here as a runtime actuation mechanism, while safety limits and operating-point policy remain platform-specific.
 - This directory contains build-critical sources. Do not rename IP identifiers, packaged-module names, or Vivado design references unless you have verified that the full build flow still works.
 - Some identifiers are intentionally preserved for compatibility with the existing Vivado, Vitis, and HLS build flow.
 - The transceiver-related designs in this repository are a representative case study used to validate the VolTune control architecture.
