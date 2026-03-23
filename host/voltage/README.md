@@ -12,6 +12,10 @@ Always restart the KC705 power before re-running the test.
 
 This tool assumes the board has already completed normal bring-up and that the target rail is already enabled. It performs runtime voltage adjustment and sampled readback for the current prototype flow, not generic regulator initialization.
 
+## ⚠️ Safety Disclaimer
+
+Incorrect voltage settings or unsafe PMBus operations may permanently damage the target hardware. Users are solely responsible for verifying all rail mappings, voltage limits, and command semantics against the original vendor documentation before running this tool.
+
 ## How to build
 
 Execute the following command on MSYS2 (`C:\msys64\mingw64.exe`).

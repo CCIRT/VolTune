@@ -22,6 +22,17 @@ In the current prototype:
 
 For PMBus concepts, data formats, command usage, and the subset of PMBus behavior relevant to this repository, see [`docs/PMBUS.md`](docs/PMBUS.md).
 
+
+## ⚠️ Safety Disclaimer
+
+This repository includes mechanisms for runtime adjustment of FPGA supply rails. Incorrect voltage settings, unsafe command sequences, or platform-specific misconfiguration may cause permanent damage to the FPGA board, power controller, or related hardware.
+
+The implementation in this repository was validated only for the specific KC705 + TI UCD9248 setup described in the accompanying paper. Use on any other platform, or use outside validated operating conditions, requires independent technical review and platform-specific validation.
+
+Users are solely responsible for verifying voltage ranges, rail mappings, PMBus command semantics, bring-up assumptions, and all safety-related operating limits against the original vendor documentation and the requirements of the target platform before issuing any command that affects board power rails.
+
+This software is provided under the repository license without any warranty. The authors and copyright holders accept no liability for hardware damage, data loss, or other consequences resulting from use or misuse of this repository.
+
 ## Control paths
 
 ### Hardware control path
@@ -166,7 +177,6 @@ For detailed usage and full option descriptions, see:
 - The transceiver case study is a representative demonstration, not a claim of universal behavior across all rails or all FPGA platforms.
 - Clock-board setup is not automated by the host tools and must be prepared separately.
 - If a PMBus-related test fails unexpectedly, power-cycle the KC705 before retrying.
-
 
 ## Citation
 
