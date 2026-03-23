@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 set line_rate 7.5
 set ref_clk 117.188
 set pll QPLL

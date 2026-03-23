@@ -1,3 +1,8 @@
+// Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+// All rights reserved.
+// This software is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+
 #ifndef HLS_POWER_MANAGER_HPP__
 #define HLS_POWER_MANAGER_HPP__
 #include <_gmp_const.h>

@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 #
 # A dummy root CMake file of this repository.
 # This file is NOT used in the actual build.

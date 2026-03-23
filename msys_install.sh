@@ -1,4 +1,9 @@
 #!/bin/bash
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 #
 # This script installs the applications required to build `host` directory on MSYS2 (64bit).
 # It should be run only once after MSYS2 has been installed on Windows.

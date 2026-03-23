@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 set(BOARD_CONFIG ${CMAKE_CURRENT_BINARY_DIR}/set_board_path.tcl)
 configure_file(set_board_path.config.tcl ${BOARD_CONFIG})
 

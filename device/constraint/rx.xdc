@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 # Pin settings
 set_property PACKAGE_PIN AD12 [get_ports sysclk_p]
 set_property PACKAGE_PIN AD11 [get_ports sysclk_n]

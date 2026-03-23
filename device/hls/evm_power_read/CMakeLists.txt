@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 project(evm_power_read)
 
 define_hls_project(evm_power_reader

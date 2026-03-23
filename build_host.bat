@@ -1,3 +1,8 @@
+REM Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+REM All rights reserved.
+REM This software is released under the MIT License.
+REM http://opensource.org/licenses/mit-license.php
+
 @echo off
 @REM
 @REM Build host test program for Windows

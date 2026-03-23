@@ -1,3 +1,8 @@
+// Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+// All rights reserved.
+// This software is released under the MIT License.
+// http://opensource.org/licenses/mit-license.php
+
 /**
  * Power Manager common data and functions.
  * This header file will be included from HLS codes and host codes.

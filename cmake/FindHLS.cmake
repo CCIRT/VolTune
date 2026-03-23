@@ -1,3 +1,8 @@
+# Copyright (c) 2026 National Institute of Advanced Industrial Science and Technology (AIST)
+# All rights reserved.
+# This software is released under the MIT License.
+# http://opensource.org/licenses/mit-license.php
+
 # Default Values
 set(HLS_VENDOR_NAME "xxx" CACHE STRING "default hls ip vendor name")
 set(HLS_TAXONOMY "xxx" CACHE STRING "default taxonomy")
