@@ -194,11 +194,9 @@ If you use this repository in your research, please cite:
 
 ## Contact
 
-The Continuum Computing Architecture Research Group (CCARG), the Intelligent Platforms Research Institute, the National Institute of Advanced Industrial Science and Technology (AIST), Japan.
+## Contact
 
-E-mail: <M-digiarc-ccirt-contact-ml@aist.go.jp>
-
-We are hiring postdocs and technical staff. Collaborations are also welcome.
+For questions about this repository, the accompanying paper, or related technical details, please contact **Akram BEN AHMED**.
 
 ## Acknowledgment
 
