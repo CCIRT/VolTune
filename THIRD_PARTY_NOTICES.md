@@ -28,4 +28,3 @@ Third-party files, generated files, vendor IP outputs, reference-design material
 ## User responsibility
 
 Users are responsible for reviewing and complying with the licensing terms applicable to any AMD/Xilinx-generated or third-party materials that are used together with this repository.
-EOF
