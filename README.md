@@ -194,8 +194,6 @@ If you use this repository in your research, please cite:
 
 ## Contact
 
-## Contact
-
 For questions about this repository, the accompanying paper, or related technical details, please contact **Akram BEN AHMED**.
 
 ## Acknowledgment
