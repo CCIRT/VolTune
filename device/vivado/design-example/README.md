@@ -54,6 +54,13 @@ You can observe BER using the `error_count_r` value.
 
 ![](./img/ila.png)
 
+
+## Public release note
+
+Some support HDL files associated with the transceiver design examples were removed from the public repository because they appear to be generated or provided as part of the AMD/Xilinx wizard example flow and may be subject to separate vendor licensing terms.
+
+The surrounding example structure and documentation are preserved, but some generated support files are not included in the public release.
+
 ## Directories
 
 ```text

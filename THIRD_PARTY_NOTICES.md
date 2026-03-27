@@ -1,14 +1,12 @@
 # Third-Party Notices
 
-This repository includes certain third-party files and generated materials that are **not covered by the repository-wide MIT License**.
+This repository includes certain third-party design flows and documentation references that are not covered by the repository-wide MIT License.
 
-## AMD / Xilinx generated design-example files
+## AMD / Xilinx generated design-example support files
 
-The following files under `device/vivado/design-example/` carry AMD/Xilinx copyright notices, proprietary/confidential notices, and related disclaimers.
+Some support HDL files originally associated with the transceiver design examples under `device/vivado/design-example/` were removed from the public release because they are generated or provided as part of the AMD/Xilinx 7 Series FPGAs Transceivers Wizard example/support flow.
 
-These files retain their original copyright, notice, disclaimer, and licensing language, and must not be reinterpreted as being relicensed under the MIT License provided in the root of this repository.
-
-### Files excluded from the repository MIT License
+The removed files were associated with:
 
 - `device/vivado/design-example/loopback-5g/rtl/support/txrx5g_support.v`
 - `device/vivado/design-example/loopback-5g/rtl/support/txrx5g_gt_usrclk_source.v`
@@ -17,18 +15,17 @@ These files retain their original copyright, notice, disclaimer, and licensing l
 - `device/vivado/design-example/loopback-5g/rtl/support/txrx5g_common_reset.v`
 - `device/vivado/design-example/dual-board-10g/rtl/support/txrx5g_gt_usrclk_source.v`
 
-Any other file in this repository that carries its own third-party copyright notice, license statement, disclaimer, or proprietary/confidential notice must also be treated as excluded from the repository MIT License unless explicitly stated otherwise.
+These removed files are not included in the public repository and are not covered by the repository-wide MIT License.
+
+Users who independently regenerate or otherwise obtain such files must follow the original AMD/Xilinx license terms applicable to their own Vivado installation and related design-example materials.
 
 ## Repository MIT License scope
 
 Unless otherwise stated, original VolTune repository files authored for this project are released under the MIT License in the root `LICENSE` file.
 
-However, **third-party files, generated files, vendor IP outputs, reference-design files, and files carrying their own notice headers are excluded from that grant**.
-
-## No modification of upstream notices
-
-All third-party copyright notices, disclaimers, and license statements must be retained in the affected files.
+Third-party files, generated files, vendor IP outputs, reference-design materials, and files carrying their own notice headers are not relicensed by the repository-wide MIT License.
 
 ## User responsibility
 
-Users of this repository are responsible for reviewing and complying with the license terms, notices, and restrictions applicable to any third-party content included here, especially AMD/Xilinx-generated or reference-design-related files.
+Users are responsible for reviewing and complying with the licensing terms applicable to any AMD/Xilinx-generated or third-party materials that are used together with this repository.
+EOF
