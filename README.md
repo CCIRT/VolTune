@@ -4,7 +4,7 @@ VolTune is an FPGA-integrated runtime voltage control framework for PMBus-contro
 
 This repository accompanies the VolTune arXiv paper and contains the design artifacts used to build the controller, generate bitstreams, and run representative voltage, power, latency, and BER experiments.
 
-**Paper:** [VolTune arXiv paper](docs/VolTune_arXiv_2026.pdf)  
+**Paper:** [VolTune arXiv paper](https://arxiv.org/abs/2603.26147)  
 
 ## Overview
 
@@ -183,12 +183,14 @@ For detailed usage and full option descriptions, see:
 If you use this repository in your research, please cite:
 
 ```bibtex
-@misc{voltune_arxiv_2026,
-  title        = {VolTune: A Fine-Grained Runtime Voltage Control Architecture for FPGA Systems},
-  author       = {Akram BEN AHMED and Takahiro Hirofuchi and Takaaki Fukai},
-  year         = {2026},
-  archivePrefix= {arXiv},
-  eprint       = {XXXX.XXXXX}
+@misc{ahmed2026voltunefinegrainedruntimevoltage,
+      title={VolTune: A Fine-Grained Runtime Voltage Control Architecture for FPGA Systems}, 
+      author={Akram Ben Ahmed and Takahiro Hirofuchi and Takaaki Fukai},
+      year={2026},
+      eprint={2603.26147},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      url={https://arxiv.org/abs/2603.26147}, 
 }
 ```
 
